@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+#include <stdlib.h>
+
+int main() {
+
+int Matriz[4][4], linha, coluna, maior=0, pl, pc;
+
+for(linha=0; linha<4; linha++)
+
+{
+
+for(coluna=0; coluna<4; coluna++)
+
+{
+
+printf("Digite o valor da Matriz:\n", linha, coluna);
+
+scanf("%d", &Matriz[linha][coluna]);
+
+if(maior < Matriz[linha][coluna])
+
+{
+
+maior = Matriz[linha][coluna];
+
+pl = linha +1;
+
+pc = coluna +1;
+
+}
+
+}
+
+printf("\n");
+
+}
+
+for(linha=0; linha<4; linha++)
+
+{
+
+for(coluna=0; coluna<4; coluna++)
+
+{
+
+printf("[%d]", Matriz[linha][coluna]);
+
+}
+
+printf("\n");
+
+}
+
+printf("O maior valor digitado foi %d, na linha %d, coluna %d ", maior, pl, pc);
+
+return 0;
+
+}
